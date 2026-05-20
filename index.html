@@ -805,7 +805,7 @@ setup.MapNodes = {
 &quot;树篱之途&quot;: {
     floor: 3, baseAlt: 2000, length: 2000,
     envTemp: -32, pollution: 20,
-    exits: [&quot;坍缩遗迹&quot;, &quot;木裂营地&quot;],
+    exits: [ &quot;木裂营地&quot;,&quot;树痕营地&quot;],
     entryFrom: [&quot;静谧林地&quot;],
      reversed:  false,
     desc: &quot;被高大灌木丛夹道的山路，相对安全，采集条件良好。&quot;,
@@ -818,18 +818,18 @@ setup.MapNodes = {
     envTemp:   -15,
     pollution: 45,
     exits:     [&quot;山之心&quot;],
-    entryFrom: [&quot;峭壁之上&quot;],
+    entryFrom: [&quot;峭壁之上&quot;,&quot;幽邃洞窟&quot;],
     reversed:  true,
    
     desc:      &quot;庞大生物栖居的洞穴深处，越往里走越难以脱身。&quot;,
     events: { encounter:15, safe:10, combat:50, task:5, special:20 }
-    
+    },
     &quot;深蓝矿脉&quot;: {
     floor: 3, baseAlt: 1000, length: 1000,
     envTemp: -20, pollution: 10,
      reversed:  true,
     exits: [&quot;山之心&quot;, &quot;泽地聚落&quot;],
-    entryFrom: [”幽邃洞窟“],
+    entryFrom: [&quot;幽邃洞窟&quot;],
     desc: &quot;深谙的洞口闪着淡淡的蓝光，你感到一阵头晕。要继续走这条路吗？&quot;,
     events: { encounter:35, safe:20, combat:25, task:10, special:10 }
 },
@@ -838,11 +838,11 @@ setup.MapNodes = {
     envTemp: -20, pollution: 10,
      reversed:  false,
     exits: [&quot;废弃观测台&quot;, &quot;死寂战场&quot;],
-    entryFrom: [”蜿蜒山路“],
+    entryFrom: [&quot;蜿蜒山路&quot;],
     desc: &quot;一条几乎被雪掩埋的石板路，看样子很久没有人或动物走过了。要走这条路吗？&quot;,
     events: { encounter:35, safe:20, combat:25, task:10, special:10 }
 },
-},
+
 /* 后续节点：蜿蜒山路、裂风峡谷、矿脉通道、积冰岩骸、昧明冻土、永恒花园 待追加 */
 
     &quot;坍缩遗迹&quot;: {
@@ -850,7 +850,7 @@ setup.MapNodes = {
     envTemp: -20, pollution: 10,
      reversed:  false,
     exits: [&quot;死寂战场&quot;],
-    entryFrom: [”蜿蜒山路“],
+    entryFrom: [&quot;蜿蜒山路&quot;],
     desc: &quot;继续顺着主干道走，山路逐渐变成了宽阔的大路，两旁的树木逐渐稀少。继续走这条路吗？&quot;,
     events: { encounter:35, safe:20, combat:25, task:10, special:10 }
 },
@@ -859,7 +859,7 @@ setup.MapNodes = {
     envTemp: -20, pollution: 10,
      reversed:  false,
     exits: [&quot;死寂战场&quot;],
-    entryFrom: [”树篱之途“],
+    entryFrom: [&quot;树篱之途&quot;],
     desc: &quot;走左边的针叶树树梢&quot;,
     events: { encounter:35, safe:10, combat:35, task:10, special:10 }
 },
@@ -867,8 +867,8 @@ setup.MapNodes = {
     floor: 3, baseAlt: 2000, length: 1000,
     envTemp: -20, pollution: 10,
      reversed:  false,
-    exits[“世界之树&quot;,“泽地聚落”],
-    entryFrom: [”树篱之途“],
+    exits:[&quot;世界之树&quot;,&quot;泽地聚落&quot;],
+    entryFrom: [&quot;树篱之途&quot;],
     desc: &quot;走右边的橡树树梢&quot;,
     events: { encounter:35, safe:20, combat:25, task:10, special:10 }
 },
@@ -1101,7 +1101,7 @@ setup.backpackLimit = function() {
     &quot;破败村庄&quot;: {equipment:[], food:[]},
     &quot;静谧林地&quot;: {equipment:[], food:[]},
     &quot;峭壁之上&quot;: {equipment:[], food:[]},
-    &quot;幽窟洞窟&quot;: {equipment:[], food:[]},
+    &quot;幽邃洞窟&quot;: {equipment:[], food:[]},
     &quot;蜿蜒山路&quot;: {equipment:[], food:[]},
     &quot;树篱之途&quot;: {equipment:[], food:[]},
     &quot;巨兽巢穴&quot;: {equipment:[], food:[]},
